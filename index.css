@@ -536,8 +536,7 @@ body {
 	font-weight: 600;
 }
 
-.contact-promises span,
-.contact-icon {
+.contact-promises span {
 	display: inline-grid;
 	place-items: center;
 	flex: 0 0 auto;
@@ -546,23 +545,6 @@ body {
 	border-radius: 7px;
 	background: var(--charcoal);
 	color: var(--yellow-light);
-}
-
-.socials-link {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: min(100%, 18rem);
-	margin-top: auto;
-	padding: 0.8rem 0.9rem;
-	border: 1px solid rgba(255, 255, 255, 0.7);
-	border-radius: 10px;
-	background: rgba(255, 255, 255, 0.34);
-	color: var(--charcoal);
-	font-size: 0.82rem;
-	font-weight: 700;
-	text-decoration: none;
-	backdrop-filter: blur(14px);
 }
 
 .contact-form {
@@ -617,33 +599,153 @@ textarea.form-control {
 	font-size: 0.85rem;
 }
 
-.contact-details {
+.contact-methods {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1.25rem;
-	margin-top: 1.5rem;
+	margin-top: auto;
+	padding-top: 1.15rem;
+	border-top: 1px solid rgba(32, 32, 32, 0.14);
 }
 
-.contact-card {
-	padding: 1.25rem;
-	border: 1px solid rgba(255, 255, 255, 0.72);
-	border-radius: 15px;
-	background: rgba(255, 255, 255, 0.3);
-	box-shadow: 0 12px 30px rgba(32, 32, 32, 0.08);
-	backdrop-filter: blur(16px);
-	-webkit-backdrop-filter: blur(16px);
+.contact-method {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	min-width: 0;
+	padding: 0.65rem 0;
 }
 
-.contact-card h3 {
-	margin: 0.9rem 0 0.3rem;
-	font-size: 0.92rem;
-	font-weight: 800;
+.contact-method + .contact-method {
+	border-top: 1px solid rgba(32, 32, 32, 0.09);
 }
 
-.contact-card p {
-	margin: 0;
-	color: var(--graphite);
+.contact-method-icon {
+	display: grid;
+	flex: 0 0 2.3rem;
+	width: 2.3rem;
+	height: 2.3rem;
+	place-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.82);
+	border-radius: 9px;
+	background: rgba(255, 255, 255, 0.66);
+	box-shadow: 0 7px 18px rgba(32, 32, 32, 0.08);
+}
+
+.contact-method-icon svg {
+	display: block;
+	width: 1.35rem;
+	height: 1.35rem;
+}
+
+.flag-icon svg {
+	width: 1.55rem;
+	height: auto;
+	border-radius: 2px;
+	box-shadow: 0 0 0 1px rgba(32, 32, 32, 0.1);
+}
+
+.location-icon {
+	border-color: var(--charcoal);
+	background: var(--charcoal);
+}
+
+.location-icon svg {
+	fill: none;
+	stroke: var(--yellow-light);
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.contact-method-copy {
+	display: grid;
+	flex: 1 1 auto;
+	min-width: 0;
+	gap: 0.1rem;
+}
+
+.contact-method-label {
+	color: rgba(32, 32, 32, 0.65);
+	font-size: 0.65rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.contact-method-value {
+	overflow: hidden;
+	color: var(--charcoal);
 	font-size: 0.78rem;
+	font-weight: 700;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.copy-button {
+	position: relative;
+	display: grid;
+	flex: 0 0 2rem;
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	place-items: center;
+	border: 1px solid rgba(32, 32, 32, 0.2);
+	border-radius: 8px;
+	background: transparent;
+	color: var(--graphite);
+	cursor: pointer;
+	transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.copy-button svg {
+	width: 0.95rem;
+	height: 0.95rem;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible {
+	border-color: var(--charcoal);
+	background: rgba(255, 255, 255, 0.5);
+	color: var(--charcoal);
+	transform: translateY(-1px);
+}
+
+.copy-button:focus-visible {
+	outline: 2px solid var(--yellow);
+	outline-offset: 2px;
+}
+
+.copy-button.is-copied {
+	border-color: var(--charcoal);
+	background: var(--charcoal);
+	color: var(--yellow-light);
+}
+
+.copy-button.is-copied::after,
+.copy-button.copy-failed::after {
+	position: absolute;
+	right: 0;
+	bottom: calc(100% + 0.4rem);
+	z-index: 2;
+	padding: 0.25rem 0.4rem;
+	border-radius: 4px;
+	background: var(--charcoal);
+	color: #ffffff;
+	font-size: 0.62rem;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.copy-button.is-copied::after {
+	content: "Copied";
+}
+
+.copy-button.copy-failed::after {
+	content: "Try again";
 }
 
 footer {
@@ -664,7 +766,7 @@ footer {
 
 .footer-branding,
 .footer-actions,
-.footer-nav,
+.footer-socials,
 .social-links {
 	display: flex;
 	align-items: center;
@@ -701,18 +803,25 @@ footer {
 	gap: clamp(1.25rem, 3vw, 2.5rem);
 }
 
-.footer-nav,
+.footer-socials,
 .social-links {
 	gap: clamp(0.8rem, 2vw, 1.35rem);
 }
 
-.footer-nav a,
 .social-links a {
 	color: var(--light-gray);
 	font-size: 0.7rem;
 	font-weight: 600;
 	text-decoration: none;
 	transition: color 160ms ease;
+}
+
+.socials-label {
+	margin: 0;
+	color: #ffffff;
+	font-size: 0.76rem;
+	font-weight: 700;
+	white-space: nowrap;
 }
 
 .social-links .social-icon-link {
@@ -734,14 +843,11 @@ footer {
 	height: 0.85rem;
 }
 
-.footer-nav a:hover,
-.footer-nav a:focus-visible,
 .social-links a:hover,
 .social-links a:focus-visible {
 	color: var(--yellow);
 }
 
-.footer-nav a:focus-visible,
 .social-links a:focus-visible,
 .footer-brand:focus-visible {
 	outline: 2px solid var(--yellow);
@@ -971,10 +1077,6 @@ html.motion-ready[data-scroll-direction="up"] .section-title.scroll-reveal:not(.
 		margin: 1.5rem 0;
 	}
 
-	.socials-link {
-		width: 100%;
-	}
-
 	.contact-form {
 		padding: 1.15rem;
 	}
@@ -987,22 +1089,8 @@ html.motion-ready[data-scroll-direction="up"] .section-title.scroll-reveal:not(.
 		grid-column: auto;
 	}
 
-	.contact-details {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
-		gap: 1rem;
-		overflow: visible;
-		scroll-snap-type: none;
-	}
-
-	.contact-card {
-		min-width: 0;
-		width: 100%;
-		scroll-snap-align: none;
-	}
-
-	.contact-card p {
-		overflow-wrap: anywhere;
+	.contact-methods {
+		margin-top: 0;
 	}
 
 	footer {
@@ -1037,12 +1125,10 @@ html.motion-ready[data-scroll-direction="up"] .section-title.scroll-reveal:not(.
 		color: var(--charcoal);
 	}
 
-	.footer-nav {
-		order: 2;
-	}
-
-	.social-links {
+	.footer-socials {
 		order: 3;
+		flex-direction: column;
+		gap: 0.65rem;
 	}
 
 	.footer-branding p {
@@ -1051,14 +1137,12 @@ html.motion-ready[data-scroll-direction="up"] .section-title.scroll-reveal:not(.
 		font-size: 0.7rem;
 	}
 
-	.footer-nav,
 	.social-links {
 		justify-content: center;
 		width: 100%;
 		flex-wrap: wrap;
 	}
 
-	.footer-nav a,
 	.social-links a {
 		color: var(--light-gray);
 		font-size: 0.72rem;

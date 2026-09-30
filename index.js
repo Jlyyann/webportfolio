@@ -7,8 +7,7 @@ const revealGroups = [
 	[".project-card"],
 	[".tools-heading"],
 	[".tool-group"],
-	[".contact-intro", ".contact-form"],
-	[".contact-card"]
+	[".contact-intro", ".contact-form"]
 ];
 
 if (!reduceMotion) {
@@ -115,3 +114,24 @@ if (typingRole && !reduceMotion) {
 
 	setTimeout(updateRole, 1400);
 }
+
+const copyButtons = document.querySelectorAll(".copy-button");
+
+copyButtons.forEach((button) => {
+	button.addEventListener("click", async () => {
+		try {
+			await navigator.clipboard.writeText(button.dataset.copy);
+			button.classList.add("is-copied");
+			button.setAttribute("aria-label", "Copied");
+
+			setTimeout(() => {
+				button.classList.remove("is-copied");
+				button.setAttribute("aria-label", button.title);
+			}, 1600);
+		} catch (error) {
+			button.classList.add("copy-failed");
+			button.setAttribute("aria-label", "Could not copy");
+			setTimeout(() => button.classList.remove("copy-failed"), 1600);
+		}
+	});
+});
