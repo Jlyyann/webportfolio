@@ -896,6 +896,22 @@ html.motion-ready .scroll-reveal {
 	will-change: opacity, translate, clip-path;
 }
 
+html.motion-ready .reveal-delay-1 {
+	--reveal-delay: 65ms;
+}
+
+html.motion-ready .reveal-delay-2 {
+	--reveal-delay: 130ms;
+}
+
+html.motion-ready .reveal-delay-3 {
+	--reveal-delay: 195ms;
+}
+
+html.motion-ready .reveal-delay-4 {
+	--reveal-delay: 260ms;
+}
+
 html.motion-ready[data-scroll-direction="up"] .scroll-reveal:not(.is-visible) {
 	--reveal-y: -72px;
 	clip-path: inset(16% 0 0 0);

@@ -21,7 +21,7 @@ if (!reduceMotion) {
 
 		items.forEach((item, index) => {
 			item.classList.add("scroll-reveal");
-			item.style.setProperty("--reveal-delay", `${Math.min(index * 65, 260)}ms`);
+			item.classList.add(`reveal-delay-${Math.min(index, 4)}`);
 			revealItems.push(item);
 		});
 	});
@@ -42,8 +42,6 @@ if (!reduceMotion) {
 
 	revealItems.forEach((item) => revealObserver.observe(item));
 
-	const heroImage = document.querySelector(".hero-image");
-	const heroCopy = document.querySelector(".hero-copy");
 	let previousScrollY = window.scrollY;
 	let scrollTicking = false;
 
@@ -53,12 +51,6 @@ if (!reduceMotion) {
 
 		if (Math.abs(movement) > 3) {
 			root.dataset.scrollDirection = movement > 0 ? "down" : "up";
-		}
-
-		if (currentScrollY < window.innerHeight) {
-			const heroProgress = currentScrollY / window.innerHeight;
-			heroImage?.style.setProperty("--hero-image-y", `${heroProgress * 54}px`);
-			heroCopy?.style.setProperty("--hero-copy-y", `${heroProgress * -28}px`);
 		}
 
 		previousScrollY = currentScrollY;
