@@ -1,6 +1,47 @@
 const typingRole = document.querySelector("#typing-role");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const navbarToggle = document.querySelector(".navbar-toggler");
+const navbarCollapse = document.querySelector("#navbarNav");
+
+if (navbarToggle && navbarCollapse) {
+	navbarToggle.addEventListener("click", () => {
+		const isOpen = navbarCollapse.classList.toggle("is-open");
+		navbarToggle.setAttribute("aria-expanded", String(isOpen));
+	});
+
+	navbarCollapse.querySelectorAll("a").forEach((link) => {
+		link.addEventListener("click", () => {
+			navbarCollapse.classList.remove("is-open");
+			navbarToggle.setAttribute("aria-expanded", "false");
+		});
+	});
+}
+
+const projectCarousel = document.querySelector("#projectCarousel");
+
+if (projectCarousel) {
+	const slides = [...projectCarousel.querySelectorAll(".carousel-item")];
+	const previousButton = projectCarousel.querySelector(".carousel-control-prev");
+	const nextButton = projectCarousel.querySelector(".carousel-control-next");
+	let activeSlide = Math.max(0, slides.findIndex((slide) => slide.classList.contains("active")));
+
+	function showSlide(nextIndex) {
+		slides[activeSlide].classList.remove("active");
+		slides[activeSlide].setAttribute("aria-hidden", "true");
+		activeSlide = (nextIndex + slides.length) % slides.length;
+		slides[activeSlide].classList.add("active");
+		slides[activeSlide].removeAttribute("aria-hidden");
+	}
+
+	slides.forEach((slide, index) => {
+		if (index !== activeSlide) slide.setAttribute("aria-hidden", "true");
+	});
+
+	previousButton?.addEventListener("click", () => showSlide(activeSlide - 1));
+	nextButton?.addEventListener("click", () => showSlide(activeSlide + 1));
+}
+
 const root = document.documentElement;
 const revealGroups = [
 	[".projects-section .section-title", ".projects-section .section-copy"],
@@ -30,12 +71,7 @@ if (!reduceMotion) {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				entry.target.classList.add("is-visible");
-				return;
-			}
-
-			const rect = entry.boundingClientRect;
-			if (rect.bottom < 0 || rect.top > window.innerHeight) {
-				entry.target.classList.remove("is-visible");
+				revealObserver.unobserve(entry.target);
 			}
 		});
 	}, { rootMargin: "-7% 0px -7% 0px", threshold: 0.08 });

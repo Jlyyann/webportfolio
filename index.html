@@ -15,10 +15,7 @@
 		<title>Jelie Ann Limotan | JelWorks</title>
 
 		<link rel="icon" href="./images/favicon.jpg" type="image/jpeg">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="preload" as="image" href="./images/jel-480.webp" imagesrcset="./images/jel-480.webp 480w, ./images/jel-864.webp 864w" imagesizes="(max-width: 767px) 100vw, 72vw" fetchpriority="high">
 		<link rel="stylesheet" href="./index.css">
 	</head>
 	<body>
@@ -45,7 +42,7 @@
 		<main id="main-content">
 			<!-- Landing Page Start -->
 			<section class="hero" id="landing">
-				<img class="hero-image" src="./images/jel.jpg" alt="Portrait of Jelie Ann">
+				<img class="hero-image" src="./images/jel-864.webp" srcset="./images/jel-480.webp 480w, ./images/jel-864.webp 864w" sizes="(max-width: 767px) 100vw, 72vw" width="864" height="1184" fetchpriority="high" decoding="async" alt="Portrait of Jelie Ann">
 				<div class="hero-shade" aria-hidden="true"></div>
 				<div class="container hero-content">
 					<div class="hero-copy">
@@ -221,30 +218,30 @@
 						<div class="tool-group">
 							<h3>Front End</h3>
 							<div class="tool-list">
-								<img src="./images/tools/logo-html5.png" alt="HTML5" title="HTML5">
-								<img src="./images/tools/logo-css3.png" alt="CSS3" title="CSS3">
-								<img src="./images/tools/logo-bootstrap.png" alt="Bootstrap" title="Bootstrap">
-								<img src="./images/tools/logo-javascript.png" alt="JavaScript" title="JavaScript">
+								<img src="./images/tools/logo-html5.webp" width="96" height="96" loading="lazy" decoding="async" alt="HTML5" title="HTML5">
+								<img src="./images/tools/logo-css3.webp" width="96" height="96" loading="lazy" decoding="async" alt="CSS3" title="CSS3">
+								<img src="./images/tools/logo-bootstrap.webp" width="96" height="96" loading="lazy" decoding="async" alt="Bootstrap" title="Bootstrap">
+								<img src="./images/tools/logo-javascript.webp" width="96" height="96" loading="lazy" decoding="async" alt="JavaScript" title="JavaScript">
 							</div>
 						</div>
 
 						<div class="tool-group">
 							<h3>MERN</h3>
 							<div class="tool-list">
-								<img src="./images/tools/logo-mongodb.png" alt="MongoDB" title="MongoDB">
-								<img src="./images/tools/logo-expressjs.png" alt="Express.js" title="Express.js">
-								<img src="./images/tools/logo-react.png" alt="React" title="React">
-								<img src="./images/tools/logo-nodejs.png" alt="Node.js" title="Node.js">
+								<img src="./images/tools/logo-mongodb.webp" width="96" height="96" loading="lazy" decoding="async" alt="MongoDB" title="MongoDB">
+								<img src="./images/tools/logo-expressjs.webp" width="96" height="96" loading="lazy" decoding="async" alt="Express.js" title="Express.js">
+								<img src="./images/tools/logo-react.webp" width="96" height="96" loading="lazy" decoding="async" alt="React" title="React">
+								<img src="./images/tools/logo-nodejs.webp" width="96" height="96" loading="lazy" decoding="async" alt="Node.js" title="Node.js">
 							</div>
 						</div>
 
 						<div class="tool-group">
 							<h3>Other Tools</h3>
 							<div class="tool-list">
-								<img src="./images/tools/logo-heroku.png" alt="Heroku" title="Heroku">
-								<img src="./images/tools/logo-git.png" alt="Git" title="Git">
-								<img src="./images/tools/logo-postman.png" alt="Postman" title="Postman">
-								<img src="./images/tools/logo-sublime-text-3.png" alt="Sublime Text" title="Sublime Text">
+								<img src="./images/tools/logo-heroku.webp" width="96" height="96" loading="lazy" decoding="async" alt="Heroku" title="Heroku">
+								<img src="./images/tools/logo-git.webp" width="96" height="96" loading="lazy" decoding="async" alt="Git" title="Git">
+								<img src="./images/tools/logo-postman.webp" width="96" height="96" loading="lazy" decoding="async" alt="Postman" title="Postman">
+								<img src="./images/tools/logo-sublime-text-3.webp" width="96" height="96" loading="lazy" decoding="async" alt="Sublime Text" title="Sublime Text">
 							</div>
 						</div>
 					</div>
@@ -383,7 +380,6 @@
 			</div>
 		</footer>
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src="./index.js"></script>
 	</body>
 </html>
