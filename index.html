@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Jelie Ann's software engineering portfolio">
+		<title>JelWorks</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="./index.css">
+	</head>
+	<body>
+		<!-- Navbar Start -->
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top" aria-label="Main navigation">
+			<div class="container">
+				<a class="navbar-brand" href="#landing" id="logo">JelWorks</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link" href="#landing">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+						<li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar End -->
+
+		<main>
+			<!-- Landing Page Start -->
+			<section class="hero" id="landing">
+				<img class="hero-image" src="./images/jel.jpg" alt="Portrait of Jelie Ann">
+				<div class="hero-shade" aria-hidden="true"></div>
+				<div class="container hero-content">
+					<div class="hero-copy">
+						<h3 class="hero-role">
+							<span class="role-visual" aria-hidden="true">
+								<mark>Aspiring</mark>
+								<span class="typing-display"><span id="typing-role">Software Engineer</span><span class="typing-cursor"></span></span>
+							</span>
+							<span class="visually-hidden">Aspiring Software Engineer, Web Designer, and Full Stack Web Developer</span>
+						</h3>
+						<h1 id="title"><span>Jelie</span><span>Ann</span></h1>
+						<p class="hero-intro">I turn ideas into functional, thoughtful, and user-friendly web experiences. <strong>I combine creativity, attention to detail, and continuous learning to build meaningful digital experiences.</strong></p>
+					</div>
+				</div>
+			</section>
+			<!-- Landing Page End -->
+
+			<!-- Projects Start -->
+			<section class="projects-section" id="projects">
+				<div class="container">
+					<h2 class="section-title">Featured Projects</h2>
+					<p class="section-copy">A few selected projects that showcase my skills and passion for development.</p>
+
+					<div id="projectCarousel" class="carousel slide projects-carousel" data-bs-interval="false" aria-label="Featured projects">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<article class="project-card">
+							<img src="./images/ecommerce-api.svg" alt="E-commerce API interface illustration">
+							<div class="project-card-content">
+								<h3>E-commerce API Documentation</h3>
+								<button class="project-view" type="button" popovertarget="ecommerce-api-details">View Project <span aria-hidden="true">→</span></button>
+							</div>
+								</article>
+							</div>
+
+							<div class="carousel-item">
+								<article class="project-card">
+							<img src="./images/course-api.svg" alt="Course API documentation illustration">
+							<div class="project-card-content">
+								<h3>Course Booking API Documentation</h3>
+								<button class="project-view" type="button" popovertarget="course-api-details">View Project <span aria-hidden="true">→</span></button>
+							</div>
+								</article>
+							</div>
+
+							<div class="carousel-item">
+								<article class="project-card">
+							<img src="./images/course-app.svg" alt="Course booking application illustration">
+							<div class="project-card-content">
+								<h3>Course Booking App</h3>
+								<button class="project-view" type="button" popovertarget="course-app-details">View Project <span aria-hidden="true">→</span></button>
+							</div>
+								</article>
+							</div>
+
+							<div class="carousel-item">
+								<article class="project-card">
+							<img src="./images/ecommerce-app.svg" alt="E-commerce application illustration">
+							<div class="project-card-content">
+								<h3>E-commerce App</h3>
+								<button class="project-view" type="button" popovertarget="ecommerce-app-details">View Project <span aria-hidden="true">→</span></button>
+							</div>
+								</article>
+							</div>
+
+							<div class="carousel-item">
+								<article class="project-card">
+							<img src="./images/airline-mockup.svg" alt="Airline booking mockup illustration">
+							<div class="project-card-content">
+								<h3>Airline Booking System Mockup</h3>
+								<button class="project-view" type="button" popovertarget="airline-mockup-details">View Project <span aria-hidden="true">→</span></button>
+							</div>
+								</article>
+							</div>
+
+							<div class="carousel-item">
+								<article class="project-card">
+							<img src="./images/airline-prototype.svg" alt="Airline booking prototype illustration">
+							<div class="project-card-content">
+								<h3>Airline Booking System Prototype</h3>
+								<button class="project-view" type="button" popovertarget="airline-prototype-details">View Project <span aria-hidden="true">→</span></button>
+							</div>
+								</article>
+							</div>
+
+							<div class="carousel-item">
+								<article class="project-card">
+							<img src="./images/capstone.svg" alt="Short courses capstone illustration">
+							<div class="project-card-content">
+								<h3>Short Courses Capstone</h3>
+								<button class="project-view" type="button" popovertarget="capstone-details">View Project <span aria-hidden="true">→</span></button>
+							</div>
+								</article>
+							</div>
+						</div>
+
+						<button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+							<span aria-hidden="true">&#8592;</span>
+							<span class="visually-hidden">Previous project</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+							<span aria-hidden="true">&#8594;</span>
+							<span class="visually-hidden">Next project</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<!-- Projects End -->
+
+			<div class="project-popover" id="ecommerce-api-details" popover role="dialog" aria-labelledby="ecommerce-api-title">
+				<button class="dialog-close" type="button" popovertarget="ecommerce-api-details" popovertargetaction="hide" aria-label="Close project details">×</button>
+				<p class="dialog-label">Project details</p>
+				<h3 id="ecommerce-api-title">E-commerce API Documentation</h3>
+				<p>Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman.</p>
+			</div>
+
+			<div class="project-popover" id="course-api-details" popover role="dialog" aria-labelledby="course-api-title">
+				<button class="dialog-close" type="button" popovertarget="course-api-details" popovertargetaction="hide" aria-label="Close project details">×</button>
+				<p class="dialog-label">Project details</p>
+				<h3 id="course-api-title">Course Booking API Documentation</h3>
+				<p>RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.</p>
+			</div>
+
+			<div class="project-popover" id="course-app-details" popover role="dialog" aria-labelledby="course-app-title">
+				<button class="dialog-close" type="button" popovertarget="course-app-details" popovertargetaction="hide" aria-label="Close project details">×</button>
+				<p class="dialog-label">Project details</p>
+				<h3 id="course-app-title">Course Booking App</h3>
+				<p>A MERN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.</p>
+			</div>
+
+			<div class="project-popover" id="ecommerce-app-details" popover role="dialog" aria-labelledby="ecommerce-app-title">
+				<button class="dialog-close" type="button" popovertarget="ecommerce-app-details" popovertargetaction="hide" aria-label="Close project details">×</button>
+				<p class="dialog-label">Project details</p>
+				<h3 id="ecommerce-app-title">E-commerce App</h3>
+				<p>MERN E-Commerce Platform. The platform features a dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.</p>
+			</div>
+
+			<div class="project-popover" id="airline-mockup-details" popover role="dialog" aria-labelledby="airline-mockup-title">
+				<button class="dialog-close" type="button" popovertarget="airline-mockup-details" popovertargetaction="hide" aria-label="Close project details">×</button>
+				<p class="dialog-label">Project details</p>
+				<h3 id="airline-mockup-title">Airline Booking System Mockup</h3>
+				<p>Side Project: Conceptual design showcasing an intuitive UI for flight search, seat selection, and booking confirmation, focusing on user experience and workflow efficiency.</p>
+			</div>
+
+			<div class="project-popover" id="airline-prototype-details" popover role="dialog" aria-labelledby="airline-prototype-title">
+				<button class="dialog-close" type="button" popovertarget="airline-prototype-details" popovertargetaction="hide" aria-label="Close project details">×</button>
+				<p class="dialog-label">Project details</p>
+				<h3 id="airline-prototype-title">Airline Booking System Prototype</h3>
+				<p>An interactive prototype demonstrating a complete airline booking flow, from flight search and seat selection to passenger details and booking confirmation.</p>
+			</div>
+
+			<div class="project-popover" id="capstone-details" popover role="dialog" aria-labelledby="capstone-title">
+				<button class="dialog-close" type="button" popovertarget="capstone-details" popovertargetaction="hide" aria-label="Close project details">×</button>
+				<p class="dialog-label">Project details</p>
+				<h3 id="capstone-title">Short Courses Capstone</h3>
+				<p>A full-stack capstone project that brings together responsive interface design, application logic, data management, and user-focused workflows in one complete web experience.</p>
+			</div>
+
+			<!-- Tools Start -->
+			<section class="tools-section" id="tools">
+				<div class="container">
+					<div class="tools-heading">
+						<p>Technologies I work with</p>
+						<h2 class="section-title">Tools</h2>
+					</div>
+
+					<div class="tools-grid">
+						<div class="tool-group">
+							<h3>Front End</h3>
+							<div class="tool-list">
+								<img src="./images/tools/logo-html5.png" alt="HTML5" title="HTML5">
+								<img src="./images/tools/logo-css3.png" alt="CSS3" title="CSS3">
+								<img src="./images/tools/logo-bootstrap.png" alt="Bootstrap" title="Bootstrap">
+								<img src="./images/tools/logo-javascript.png" alt="JavaScript" title="JavaScript">
+							</div>
+						</div>
+
+						<div class="tool-group">
+							<h3>MERN</h3>
+							<div class="tool-list">
+								<img src="./images/tools/logo-mongodb.png" alt="MongoDB" title="MongoDB">
+								<img src="./images/tools/logo-expressjs.png" alt="Express.js" title="Express.js">
+								<img src="./images/tools/logo-react.png" alt="React" title="React">
+								<img src="./images/tools/logo-nodejs.png" alt="Node.js" title="Node.js">
+							</div>
+						</div>
+
+						<div class="tool-group">
+							<h3>Other Tools</h3>
+							<div class="tool-list">
+								<img src="./images/tools/logo-heroku.png" alt="Heroku" title="Heroku">
+								<img src="./images/tools/logo-git.png" alt="Git" title="Git">
+								<img src="./images/tools/logo-postman.png" alt="Postman" title="Postman">
+								<img src="./images/tools/logo-sublime-text-3.png" alt="Sublime Text" title="Sublime Text">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Tools End -->
+
+			<!-- Contact Start -->
+			<section class="contact-section" id="contact">
+				<div class="container">
+					<div class="contact-layout">
+						<div class="contact-intro">
+							<p class="contact-eyebrow">Contact me</p>
+							<h2 class="section-title">Get in Touch</h2>
+							<p class="section-copy">Have a project or question? Feel free to contact me.</p>
+
+							<ul class="contact-promises">
+								<li><span aria-hidden="true">↻</span> Replies within 24 hours</li>
+								<li><span aria-hidden="true">◇</span> Direct communication</li>
+								<li><span aria-hidden="true">✓</span> Open to collaboration</li>
+							</ul>
+
+							<a class="socials-link" href="#social-links">My Socials <span aria-hidden="true">↗</span></a>
+						</div>
+
+						<form class="contact-form">
+							<div class="contact-fields">
+								<div>
+									<label for="name" class="form-label">Name</label>
+									<input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+								</div>
+								<div>
+									<label for="email" class="form-label">Email</label>
+									<input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+								</div>
+								<div class="message-field">
+									<label for="message" class="form-label">Message</label>
+									<textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+								</div>
+							</div>
+							<button type="submit" class="btn-primary-custom">Submit</button>
+						</form>
+					</div>
+
+					<div class="contact-details">
+						<article class="contact-card">
+							<span class="contact-icon" aria-hidden="true">✉</span>
+							<h3>Email Me</h3>
+							<p>hello@jelworks.dev</p>
+						</article>
+						<article class="contact-card">
+							<span class="contact-icon" aria-hidden="true">☎</span>
+							<h3>Call Me</h3>
+							<p>+63 900 000 0000</p>
+						</article>
+						<article class="contact-card">
+							<span class="contact-icon" aria-hidden="true">⌖</span>
+							<h3>My Location</h3>
+							<p>Available remotely</p>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- Contact End -->
+		</main>
+
+		<footer>
+			<div class="footer-inner">
+				<div class="footer-branding">
+					<a class="footer-brand" href="#landing" aria-label="JelWorks home">
+						<span class="footer-logo" aria-hidden="true">J</span>
+						<span>JelWorks</span>
+					</a>
+					<p>&copy; 2026 JelWorks Studio. All rights reserved.</p>
+				</div>
+
+				<div class="footer-actions">
+					<nav class="footer-nav" aria-label="Footer navigation">
+					</nav>
+					<div class="social-links" id="social-links" aria-label="Social links">
+						<a class="social-icon-link" href="https://github.com/Jlyyann" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+							<svg viewBox="0 0 16 16" role="img" aria-hidden="true">
+								<path fill="currentColor" d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.64 5.47 7.71.4.08.55-.18.55-.39 0-.19-.01-.83-.01-1.51-2.01.38-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.53-.01-.54.63-.01 1.08.59 1.23.83.72 1.23 1.87.88 2.33.67.07-.53.28-.88.51-1.08-1.78-.21-3.64-.9-3.64-4.01 0-.89.31-1.62.82-2.19-.08-.2-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.49 7.49 0 0 1 8 3.92c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.96.08 2.16.51.57.82 1.3.82 2.19 0 3.12-1.87 3.8-3.65 4.01.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.47.55.39A8.15 8.15 0 0 0 16 8.13C16 3.64 12.42 0 8 0z"/>
+							</svg>
+							<span class="visually-hidden">GitHub</span>
+						</a>
+						<a class="social-icon-link" href="https://www.linkedin.com/in/jelie-ann-limotan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+							<svg viewBox="0 0 16 16" role="img" aria-hidden="true">
+								<path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708C16 15.487 15.474 16 14.825 16H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.251c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.194v.025h-.016l.016-.025V6.169H6.25c.03.678 0 7.225 0 7.225h2.401z"/>
+							</svg>
+							<span class="visually-hidden">LinkedIn</span>
+						</a>
+						<a class="social-icon-link facebook-link" href="https://www.facebook.com/profile.php?id=100064183865847" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+							<svg viewBox="0 0 320 512" role="img" aria-hidden="true">
+								<path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06H297V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+							</svg>
+							<span class="visually-hidden">Facebook</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
