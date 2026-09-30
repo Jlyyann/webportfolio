@@ -23,6 +23,32 @@ body {
 	background: var(--light-gray);
 }
 
+.skip-link {
+	position: fixed;
+	top: 0.75rem;
+	left: 0.75rem;
+	z-index: 1100;
+	padding: 0.7rem 1rem;
+	border-radius: 6px;
+	background: var(--yellow-light);
+	color: var(--charcoal);
+	font-size: 0.78rem;
+	font-weight: 800;
+	text-decoration: none;
+	transform: translateY(-180%);
+	transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+	color: var(--charcoal);
+	transform: translateY(0);
+}
+
+:focus-visible {
+	outline: 3px solid var(--yellow-light);
+	outline-offset: 4px;
+}
+
 .container {
 	max-width: 1120px;
 }
@@ -198,6 +224,21 @@ body {
 	font-size: clamp(0.85rem, 1.25vw, 1.05rem);
 	line-height: 1.65;
 	color: var(--light-gray);
+}
+
+.hero-actions {
+	margin: 1.5rem 0 0 0.4rem;
+}
+
+.hero-actions .btn-primary-custom span {
+	display: inline-block;
+	margin-left: 0.35rem;
+	transition: transform 180ms ease;
+}
+
+.hero-actions .btn-primary-custom:hover span,
+.hero-actions .btn-primary-custom:focus-visible span {
+	transform: translateY(3px);
 }
 
 .btn-primary-custom {
